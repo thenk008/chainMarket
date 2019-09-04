@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1OfXwkOVwA5NUEunwgIl98iaBzq" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.shareData.chainMarket.test" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.shareData.chainMarket.tools" />
+      <recent name="com.shareData.chainMarket.one" />
+      <recent name="com.shareData.chainMarket.distribution" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\one" />
+      <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\distribution" />
+      <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\tools" />
+      <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\classLoader" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shareData.chainMarket.test.App" />
+      <module name="chainMarket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shareData.chainMarket.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shareData.chainMarket.test.Test" />
+      <module name="chainMarket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shareData.chainMarket.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTwo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shareData.chainMarket.test.TestTwo" />
+      <module name="chainMarket" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shareData.chainMarket.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.TestTwo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="" />
+      <created>1564369865263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564369865263</updated>
+      <workItem from="1564369868055" duration="739000" />
+      <workItem from="1565593927779" duration="9869000" />
+      <workItem from="1565659525084" duration="17116000" />
+      <workItem from="1566006098598" duration="6949000" />
+      <workItem from="1566018575862" duration="1149000" />
+      <workItem from="1566024584189" duration="10000" />
+      <workItem from="1566194351931" duration="1540000" />
+      <workItem from="1566196814553" duration="27000" />
+      <workItem from="1566466450251" duration="1783000" />
+      <workItem from="1566522803794" duration="3191000" />
+      <workItem from="1566535659531" duration="1208000" />
+      <workItem from="1566536943566" duration="5140000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
