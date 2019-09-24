@@ -39,6 +39,7 @@ public class ScanControl {
                     okByJar(re);
                 }
             } else {
+                System.out.println("开始读取==");
                 ok(url.getPath(), listFileName);
             }
         }
@@ -107,7 +108,8 @@ public class ScanControl {
                 boolean bc = ma.isAnnotationPresent(Central.class);
                 if (bc) {
                     Central central = ma.getAnnotation(Central.class);
-                    String url = central.url();
+                    String url = central.url()+"/";
+                    //System.out.println("url="+url);
                     myEntity.put(url, name);
                 }
             }

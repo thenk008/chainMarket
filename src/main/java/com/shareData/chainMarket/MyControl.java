@@ -20,7 +20,9 @@ public class MyControl extends MySon {
             if (uri != null) {
                 c = Class.forName(uri.getUri());
                 setMyboss(c);
-                String urm =share.getUri().substring(uri.getUrl().length());
+                //System.out.println("uri=="+uri.getUrl());
+                //System.out.println("shareuri=="+share.getUri());
+                String urm =share.getUri().substring(uri.getUrl().length()-1);
                 body(share.getBody(), share.getParams(), http, ch,urm);
             } else {
             	System.out.println("不存在");
