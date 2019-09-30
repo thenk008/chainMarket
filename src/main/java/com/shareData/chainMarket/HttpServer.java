@@ -1,9 +1,11 @@
 package com.shareData.chainMarket;
 
 import java.net.InetSocketAddress;
+
 import com.shareData.chainMarket.constant.Config;
 import com.shareData.chainMarket.constant.HttpsSetting;
 import com.shareData.chainMarket.scan.ScanControl;
+import com.shareData.chainMarket.session.SessionThread;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -13,9 +15,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.codec.http.HttpObjectAggregator;
-import io.netty.handler.codec.http.HttpServerCodec;
+import io.netty.handler.codec.http.HttpRequestDecoder;
+import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.ssl.SslHandler;
-import io.netty.handler.stream.ChunkedWriteHandler;
 
 public class HttpServer {
     public void start(int port, String rootUrl, String delimiter, int maxLength, String webSocektUrl,
@@ -29,6 +31,9 @@ public class HttpServer {
                 Config.setRootUrl(rootUrl);
                 Config.setWebSocketUrl(webSocektUrl);
                 scanControl.start(rootUrl);
+                Thread sessionTh = new Thread(new SessionThread());
+                sessionTh.setDaemon(true);
+                sessionTh.start();
                 connect(port, webSocketBack);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -73,9 +78,9 @@ class Em extends ChannelInitializer<SocketChannel> {
             //务必放在第一位
             ch.pipeline().addLast("sslHandler", new SslHandler(HttpSslContextFactory.createSSLEngine()));
         }
-        ch.pipeline().addLast(new HttpServerCodec());
-        ch.pipeline().addLast(new HttpObjectAggregator(65536));
-        ch.pipeline().addLast(new ChunkedWriteHandler());
+        ch.pipeline().addLast("http-decoder", new HttpRequestDecoder());
+        ch.pipeline().addLast(new HttpObjectAggregator(Config.getFileMaxLength()));
+        ch.pipeline().addLast("http-encoder", new HttpResponseEncoder());
         ch.pipeline().addLast(new Http(webSocketBack));
     }
 

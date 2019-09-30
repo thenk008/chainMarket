@@ -6,24 +6,25 @@ import com.shareData.chainMarket.def.UrmAndUrl;
 import com.shareData.chainMarket.i.RequestManager;
 import io.netty.channel.ChannelHandlerContext;
 
+import java.util.List;
 import java.util.Map;
 
-public class MyControl extends MySon {
+public class MyData extends MySon {
     Map<String, String> urlMap = ResConfig.get().getMyEntity();
 
-    public boolean my(ShareMessage share, RequestManager http, ChannelHandlerContext ch) {
+    public boolean my(List<FileAndName> fileAndNames, RequestManager http, ChannelHandlerContext ch, String url) {
         Class<?> c;
         boolean isRight = true;
         try {
             //从uri里将实例化的类截取出来
-            UrmAndUrl uri = uri(share.getUri());
+            UrmAndUrl uri = uri(url);
             if (uri != null) {
                 c = Class.forName(uri.getUri());
                 setMyboss(c);
                 //System.out.println("uri=="+uri.getUrl());
                 //System.out.println("shareuri=="+share.getUri());
-                String urm = share.getUri().substring(uri.getUrl().length() - 1);
-                isRight = body(share.getBody(), share.getParams(), http, ch, urm);
+                String urm = url.substring(uri.getUrl().length() - 1);
+                isRight = data(fileAndNames, http, ch, urm);
             } else {
                 System.out.println("不存在");
                 isRight = false;

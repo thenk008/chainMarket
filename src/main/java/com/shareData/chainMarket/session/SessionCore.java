@@ -7,24 +7,26 @@ import java.util.concurrent.ConcurrentHashMap;
 import com.shareData.chainMarket.tools.HttpIdCreator;
 
 public class SessionCore {
-	private static final SessionCore SESSION = new SessionCore();
-	private static Map<Long, Map<String, Object>> sessionMaps = new ConcurrentHashMap<>();
-    public Map<String,Object> getSession(long sessionid) {
-    	return sessionMaps.get(sessionid);
+    private static SessionCore SESSION = new SessionCore();
+    private static Map<Long, SessionMessage> session = new HashMap<>();
+    public static  SessionCore get(){
+        return  SESSION;
     }
-    public void putSession(long sessionid,Map<String, Object> map) {
-    	sessionMaps.put(sessionid, map);
-    	
+    public static Map<Long, SessionMessage> getSessionMessage() {
+        return session;
     }
-    public long createSession() {
-    	long sessionid = HttpIdCreator.get().nextId();
-    	sessionMaps.put(sessionid, new HashMap<String,Object>());
-    	return sessionid;
-    }
-	private SessionCore() {
-	}
 
-	public static SessionCore get() {
-		return SESSION;
-	}
+    public static SessionMessage getSession(long sessionId) {
+        return session.get(sessionId);
+    }
+
+    public static long createSession() {
+        SessionMessage sessionMessage = new SessionMessage();
+        long sessionId = HttpIdCreator.get().nextId();
+        session.put(sessionId, sessionMessage);
+        return sessionId;
+    }
+
+    private SessionCore() {
+    }
 }

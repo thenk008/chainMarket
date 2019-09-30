@@ -6,7 +6,16 @@ public class Config {
     private static byte[] POINTER;//分隔符
     private static int Message_Max;//信息包最大长度
     private static String rootUrl;//根路径
-    private static String webSocketUrl;//
+    private static String webSocketUrl;//websocketURL
+    private static int fileMaxLength = 6553666;//文件最大长度
+
+    public static int getFileMaxLength() {
+        return fileMaxLength;
+    }
+
+    public static void setFileMaxLength(int fileMaxLength) {
+        Config.fileMaxLength = fileMaxLength;
+    }
 
     public static String getWebSocketUrl() {
         return webSocketUrl;

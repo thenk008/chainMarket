@@ -1,8 +1,11 @@
 package com.shareData.chainMarket;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.List;
 import java.util.Map;
 
 import com.shareData.chainMarket.constant.HttpCode;
@@ -17,13 +20,13 @@ public abstract class MySon {
         myboss = mybos;
     }
 
-    public void body(String body, Map<Object, Object> map, RequestManager web, ChannelHandlerContext ch
+    public boolean body(String body, Map<Object, Object> map, RequestManager web, ChannelHandlerContext ch
             , String methodName) {
+        boolean isRight = false;
         try {
             //java反射机制获取所有方法名
             Method[] declaredMethods = myboss.getDeclaredMethods();
             //遍历循环方法并获取对应的注解名称
-            boolean isRight = false;
             for (Method declaredMethod : declaredMethods) {
                 String isNotNullStr;
                 // 判断是否方法上存在注解  MethodInterface
@@ -40,7 +43,55 @@ public abstract class MySon {
                         Object obj = myboss.newInstance();
                         Object ob = me.invoke(obj, body, map);
                         if (ob != null) {
-                            web.response(ch,ob,HttpCode.OK);
+                            web.response(ch, ob, HttpCode.OK);
+                        } else {
+                            System.out.println("return null");
+                        }
+                        break;
+                    }
+                }
+
+            }
+            if (!isRight) {
+                System.out.println("NOT FOUND URL1");
+            }
+        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | UnsupportedEncodingException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        }
+        return isRight;
+    }
+
+    public boolean data(List<FileAndName> fileAndNames, RequestManager web, ChannelHandlerContext ch
+            , String methodName) {
+        boolean isRight = false;
+        try {
+            //java反射机制获取所有方法名
+            Method[] declaredMethods = myboss.getDeclaredMethods();
+            //遍历循环方法并获取对应的注解名称
+            for (Method declaredMethod : declaredMethods) {
+                String isNotNullStr;
+                // 判断是否方法上存在注解  MethodInterface
+                boolean annotationPresent = declaredMethod.isAnnotationPresent(Central.class);
+                if (annotationPresent) {
+                    // 获取自定义注解对象
+                    Central methodAnno = declaredMethod.getAnnotation(Central.class);
+                    // 根据对象获取注解值
+                    isNotNullStr = methodAnno.url();
+                    //System.out.println("内部=="+isNotNullStr+",待检测=="+methodName);
+                    if (isNotNullStr.hashCode() == methodName.hashCode() && isNotNullStr.equals(methodName)) {
+                        isRight = true;
+                        Method me = myboss.getMethod(declaredMethod.getName(), List.class);
+                        Object obj = myboss.newInstance();
+                        Object ob = me.invoke(obj, fileAndNames);
+                        if (ob != null) {
+                            for (FileAndName fileAndName : fileAndNames) {
+                                InputStream inputStream = fileAndName.getInputStream();
+                                if (inputStream != null) {
+                                    inputStream.close();
+                                }
+                            }
+                            web.response(ch, ob, HttpCode.OK);
                         } else {
                             System.out.println("return null");
                         }
@@ -52,8 +103,25 @@ public abstract class MySon {
             if (!isRight) {
                 System.out.println("NOT FOUND URL");
             }
-        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | UnsupportedEncodingException e) {
-            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        } catch (InstantiationException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        } catch (IllegalAccessException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        } catch (InvocationTargetException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        } catch (UnsupportedEncodingException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
+        } catch (IOException e) {
+            isRight = false;
+            System.out.println("NOT FOUND URL2");
         }
+        return isRight;
     }
 }

@@ -1,6 +1,9 @@
 package com.shareData.chainMarket;
 
-import java.io.UnsupportedEncodingException;
+import java.io.*;
+import java.nio.channels.FileChannel;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.shareData.chainMarket.agreement.ShareMessage;
 import com.shareData.chainMarket.constant.Config;
@@ -14,21 +17,23 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
-import io.netty.handler.codec.http.DefaultFullHttpResponse;
-import io.netty.handler.codec.http.FullHttpRequest;
-import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.HttpResponseStatus;
-import io.netty.handler.codec.http.HttpVersion;
+import io.netty.handler.codec.http.*;
+import io.netty.handler.codec.http.multipart.*;
 import io.netty.handler.codec.http.websocketx.*;
+import io.netty.util.ReferenceCountUtil;
 
 public class Http extends SimpleChannelInboundHandler<Object> implements RequestManager {
     private WebSocketServerHandshaker handshaker;
     private WebSocketBack webSocketBack;
+    private HttpPostRequestDecoder httpDecoder;
+    private String uri;
+    private static final HttpDataFactory factory = new DefaultHttpDataFactory(true);
+    HttpRequest request;
 
     public Http(WebSocketBack webSocketBack) {
+        super(false);
         this.webSocketBack = webSocketBack;
     }
-
 
 
     @Override
@@ -41,12 +46,75 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
 
     @Override
     protected void channelRead0(ChannelHandlerContext arg0, Object msg) throws Exception {
-        if (msg instanceof FullHttpRequest) {
-            handleHttpRequest(arg0, (FullHttpRequest) msg);
+        System.out.println();
+        if (msg instanceof HttpRequest) {
+            request = (HttpRequest) msg;
+            uri = request.uri();
+            String contentType = request.headers().get("Content-Type");
+            if (contentType == null || contentType.indexOf("multipart/form-data") > -1) {
+                if (request.method().equals(HttpMethod.POST)) {
+                    httpDecoder = new HttpPostRequestDecoder(factory, request);
+                    httpDecoder.setDiscardThreshold(0);
+                } else {
+                    // 返回失败
+                    response(arg0, null, HttpCode.NOT_FOUND);
+                }
+            } else {
+                handleHttpRequest(arg0, (FullHttpRequest) msg);
+            }
+        }
+        if (msg instanceof HttpContent) {
+            if (httpDecoder != null) {
+                final HttpContent chunk = (HttpContent) msg;
+                httpDecoder.offer(chunk);
+                if (chunk instanceof LastHttpContent) {
+                    MyData data = new MyData();
+                    List<FileAndName> fileAndNames = writeChunk(arg0);
+                    //关闭httpDecoder
+                    httpDecoder.destroy();
+                    httpDecoder = null;
+                    boolean isNotFound = data.my(fileAndNames, this, arg0, uri);
+                    if (!isNotFound) {
+                        response(arg0, null, HttpCode.NOT_FOUND);
+                    }
+                }
+                ReferenceCountUtil.release(msg);
+            } else {
+                // 返回失败
+                response(arg0, null, HttpCode.NOT_FOUND);
+            }
         } else if (msg instanceof WebSocketFrame) {
             WebSocketFrame fre = (WebSocketFrame) msg;
-            handleWebSocketFrame(arg0, fre, webSocketBack);
+            if (fre.content().readableBytes() < 65536) {
+                handleWebSocketFrame(arg0, fre, webSocketBack);
+            }
         }
+    }
+
+    private List<FileAndName> writeChunk(ChannelHandlerContext ctx) throws IOException {
+        List<InterfaceHttpData> postList = httpDecoder.getBodyHttpDatas();
+        List<FileAndName> fileAndNames = new ArrayList<>();
+        for (int i = 0; i < postList.size(); i++) {
+            InterfaceHttpData data = postList.get(i);
+            if (data != null) {
+                FileAndName fileAndName = new FileAndName();
+                fileAndName.setName(data.getName());
+                switch (data.getHttpDataType()) {
+                    case FileUpload://文件类型
+                        final FileUpload fileUpload = (FileUpload) data;
+                        InputStream input = new FileInputStream(fileUpload.getFile());
+                        fileAndName.setInputStream(input);
+                        fileAndNames.add(fileAndName);
+                        break;
+                    case Attribute://URL 参数
+                        Attribute attribute = (Attribute) data;
+                        fileAndName.setText(attribute.getValue());
+                        fileAndNames.add(fileAndName);
+                        break;
+                }
+            }
+        }
+        return fileAndNames;
     }
 
     private void handleHttpRequest(ChannelHandlerContext arg0, FullHttpRequest msg) throws Exception {// !msg.getDecoderResult().isSuccess()
