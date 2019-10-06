@@ -1,7 +1,6 @@
 package com.shareData.chainMarket;
 
 import java.io.*;
-import java.nio.channels.FileChannel;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +12,6 @@ import com.shareData.chainMarket.one.Pond;
 import com.shareData.chainMarket.tools.ShareCon;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -153,6 +151,7 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
                 handshaker.handshake(arg0.channel(), msg);
             }
         }
+        webSocketBack.active(arg0);
     }
 
     @Override

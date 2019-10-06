@@ -44,8 +44,10 @@ class Buf implements Runnable {//断线重连
     @Override
     public void run() {//触发回调
         byte[] br = socketMessage.getBuf(message,ch);
-        ByteBuf echo = Unpooled.copiedBuffer(br);
-        ch.writeAndFlush(echo);
+        if (br!=null) {
+            ByteBuf echo = Unpooled.copiedBuffer(br);
+            ch.writeAndFlush(echo);
+        }
     }
 
 }
@@ -64,8 +66,10 @@ class Text implements Runnable {//断线重连
     @Override
     public void run() {//触发回调
         String br = socketMessage.getText(message,ch);
-        ByteBuf echo = Unpooled.copiedBuffer(br.getBytes());
-        ch.writeAndFlush(echo);
+        if (br!=null) {
+            ByteBuf echo = Unpooled.copiedBuffer(br.getBytes());
+            ch.writeAndFlush(echo);
+        }
     }
 
 }

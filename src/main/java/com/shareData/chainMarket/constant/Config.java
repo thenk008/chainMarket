@@ -8,7 +8,7 @@ public class Config {
     private static String rootUrl;//根路径
     private static String webSocketUrl;//websocketURL
     private static int fileMaxLength = 6553666;//文件最大长度
-
+    public static final AttributeKey<Long> CHANNEL_ID = AttributeKey.valueOf("channelId");
     public static int getFileMaxLength() {
         return fileMaxLength;
     }

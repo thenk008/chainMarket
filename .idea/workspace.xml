@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/FileAndName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SuperMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/WebSocketManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/WebSocketBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/WebSocketBack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/constant/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/constant/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/tools/HttpIdCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/tools/HttpIdCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/i/RequestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/i/RequestManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/one/Pond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/one/Pond.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,9 +46,10 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proposer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -174,6 +167,8 @@
       <workItem from="1569718996376" duration="586000" />
       <workItem from="1569723738864" duration="11116000" />
       <workItem from="1569805352334" duration="8840000" />
+      <workItem from="1569818824969" duration="3849000" />
+      <workItem from="1570330087142" duration="4892000" />
     </task>
     <task id="LOCAL-00001" summary="修改BUG">
       <created>1569294952721</created>
@@ -182,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569294952721</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加FORM表单提交">
+      <created>1569818897662</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1569818897662</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +205,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改BUG" />
+    <MESSAGE value="增加FORM表单提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加FORM表单提交" />
   </component>
 </project>
