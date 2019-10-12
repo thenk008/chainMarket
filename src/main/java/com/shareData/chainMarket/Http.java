@@ -49,7 +49,7 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
             request = (HttpRequest) msg;
             uri = request.uri();
             String contentType = request.headers().get("Content-Type");
-            if (contentType == null || contentType.indexOf("multipart/form-data") > -1) {
+            if (contentType != null && contentType.indexOf("multipart/form-data") > -1) {
                 if (request.method().equals(HttpMethod.POST)) {
                     httpDecoder = new HttpPostRequestDecoder(factory, request);
                     httpDecoder.setDiscardThreshold(0);
@@ -77,11 +77,9 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
                     }
                 }
                 ReferenceCountUtil.release(msg);
-            } else {
-                // 返回失败
-                response(arg0, null, HttpCode.NOT_FOUND);
             }
-        } else if (msg instanceof WebSocketFrame) {
+        }
+        if (msg instanceof WebSocketFrame) {
             WebSocketFrame fre = (WebSocketFrame) msg;
             if (fre.content().readableBytes() < 65536) {
                 handleWebSocketFrame(arg0, fre, webSocketBack);

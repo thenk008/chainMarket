@@ -4,6 +4,7 @@ import com.shareData.chainMarket.WebSocketBack;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -67,8 +68,7 @@ class Text implements Runnable {//断线重连
     public void run() {//触发回调
         String br = socketMessage.getText(message,ch);
         if (br!=null) {
-            ByteBuf echo = Unpooled.copiedBuffer(br.getBytes());
-            ch.writeAndFlush(echo);
+            ch.writeAndFlush(new TextWebSocketFrame(br));
         }
     }
 

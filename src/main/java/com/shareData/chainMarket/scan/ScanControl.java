@@ -76,7 +76,8 @@ public class ScanControl {
             boolean bc = myClass.isAnnotationPresent(Central.class);
             if (bc) {
                 Central central = myClass.getAnnotation(Central.class);
-                String url = central.url();
+                String url = central.url()+"/";
+                System.out.println(url + "==" + ur);
                 myEntity.put(url, ur);
             }
         }
@@ -103,13 +104,12 @@ public class ScanControl {
                 }
                 int a = name.indexOf(ur);
                 name = name.substring(a, name.length() - 6);
-                System.out.println("name==" + name);
                 Class<?> ma = AppClassLoader.getInstance().findClassByBytes(name, br);
                 boolean bc = ma.isAnnotationPresent(Central.class);
                 if (bc) {
                     Central central = ma.getAnnotation(Central.class);
-                    String url = central.url()+"/";
-                    //System.out.println("url="+url);
+                    String url = central.url() + "/";
+                    System.out.println("url="+url+",name=="+name);
                     myEntity.put(url, name);
                 }
             }

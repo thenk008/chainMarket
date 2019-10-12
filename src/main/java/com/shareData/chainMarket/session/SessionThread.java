@@ -1,9 +1,12 @@
 package com.shareData.chainMarket.session;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 public class SessionThread implements Runnable {
-    Map<Long, SessionMessage> sessionMessageMap = SessionCore.getSessionMessage();
+    private Map<Long, SessionMessage> sessionMessageMap = SessionCore.getSessionMessage();
+    private List<Long> sessionList = new ArrayList<>();
 
     @Override
     public void run() {
@@ -14,9 +17,13 @@ public class SessionThread implements Runnable {
                         SessionMessage sessionMessage = entry.getValue();
                         long key = entry.getKey();
                         if (sessionMessage.up() > 1800) {//移除
-                            sessionMessageMap.remove(key);
+                            sessionList.add(key);
                         }
                     }
+                    for (long key : sessionList) {
+                        sessionMessageMap.remove(key);
+                    }
+                    sessionList.clear();
                 }
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

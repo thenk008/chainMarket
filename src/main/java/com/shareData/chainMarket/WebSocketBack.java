@@ -1,10 +1,13 @@
 package com.shareData.chainMarket;
 
+import com.shareData.chainMarket.session.WebSocketManager;
 import io.netty.channel.ChannelHandlerContext;
 
 public abstract class WebSocketBack {
     public void active(ChannelHandlerContext ctx) {//激活
-
+        WebSocketManager.register(1,ctx);
+        WebSocketManager.putMessage(1,"您有新的订单");
+        WebSocketManager.closeChannel(1);
     }
     public void error(ChannelHandlerContext ctx){
 

@@ -5,7 +5,7 @@
 
 	<groupId>com.shareData</groupId>
 	<artifactId>chainMarket</artifactId>
-	<version>1.1.2</version>
+	<version>1.2.2</version>
 	<packaging>jar</packaging>
 
 	<name>chainMarket</name>
