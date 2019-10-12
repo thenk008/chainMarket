@@ -6,6 +6,7 @@ import com.shareData.chainMarket.def.UrmAndUrl;
 import com.shareData.chainMarket.i.RequestManager;
 import io.netty.channel.ChannelHandlerContext;
 
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 public class MyControl extends MySon {
@@ -25,10 +26,10 @@ public class MyControl extends MySon {
                 String urm = share.getUri().substring(uri.getUrl().length() - 1);
                 isRight = body(share.getBody(), share.getParams(), http, ch, urm);
             } else {
-                System.out.println("不存在");
+                System.out.println("NOT FOUND URL1");
                 isRight = false;
             }
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             isRight = false;
         }
         return isRight;

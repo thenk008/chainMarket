@@ -4,14 +4,10 @@
     <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/WebSocketBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/WebSocketBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/one/Pond.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/one/Pond.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/scan/ScanControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/scan/ScanControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/SessionThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/WebSocketManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/session/WebSocketManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +178,7 @@
       <workItem from="1570698954488" duration="265000" />
       <workItem from="1570699363840" duration="116000" />
       <workItem from="1570764485529" duration="5732000" />
-      <workItem from="1570860299938" duration="3251000" />
+      <workItem from="1570860299938" duration="7629000" />
     </task>
     <task id="LOCAL-00001" summary="修改BUG">
       <created>1569294952721</created>
@@ -205,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570335088616</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改WEBSOCKET的BUG">
+      <created>1570863655914</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1570863655914</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,6 +231,7 @@
     <MESSAGE value="修改BUG" />
     <MESSAGE value="增加FORM表单提交" />
     <MESSAGE value="增加WEBSOCKET 管理器" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加WEBSOCKET 管理器" />
+    <MESSAGE value="修改WEBSOCKET的BUG" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改WEBSOCKET的BUG" />
   </component>
 </project>

@@ -21,7 +21,7 @@ public abstract class MySon {
     }
 
     public boolean body(String body, Map<Object, Object> map, RequestManager web, ChannelHandlerContext ch
-            , String methodName) {
+            , String methodName) throws UnsupportedEncodingException {
         boolean isRight = false;
         try {
             //java反射机制获取所有方法名
@@ -55,15 +55,16 @@ public abstract class MySon {
             if (!isRight) {
                 System.out.println("NOT FOUND URL1");
             }
-        } catch (NoSuchMethodException | SecurityException | InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException | UnsupportedEncodingException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
+        } catch (Exception e) {
+            //抛错前返回500
+            web.response(ch, null, HttpCode.SERVER_ERROR);
+            e.printStackTrace();
         }
         return isRight;
     }
 
     public boolean data(List<FileAndName> fileAndNames, RequestManager web, ChannelHandlerContext ch
-            , String methodName) {
+            , String methodName) throws UnsupportedEncodingException {
         boolean isRight = false;
         try {
             //java反射机制获取所有方法名
@@ -103,24 +104,9 @@ public abstract class MySon {
             if (!isRight) {
                 System.out.println("NOT FOUND URL");
             }
-        } catch (NoSuchMethodException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
-        } catch (InstantiationException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
-        } catch (IllegalAccessException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
-        } catch (InvocationTargetException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
-        } catch (UnsupportedEncodingException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
-        } catch (IOException e) {
-            isRight = false;
-            System.out.println("NOT FOUND URL2");
+        } catch (Exception e) {
+            web.response(ch, null, HttpCode.SERVER_ERROR);
+            e.printStackTrace();
         }
         return isRight;
     }

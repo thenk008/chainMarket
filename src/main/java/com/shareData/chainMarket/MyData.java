@@ -26,10 +26,10 @@ public class MyData extends MySon {
                 String urm = url.substring(uri.getUrl().length() - 1);
                 isRight = data(fileAndNames, http, ch, urm);
             } else {
-                System.out.println("不存在");
+                System.out.println("NOT FOUND URL");
                 isRight = false;
             }
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             isRight = false;
         }
         return isRight;
