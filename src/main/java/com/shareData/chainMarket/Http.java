@@ -38,8 +38,8 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         // 用户出现异常 ,返回业务异常提醒
         System.out.println("产生异常信息");
-        response(ctx, null, HttpCode.SERVER_ERROR);
         super.exceptionCaught(ctx, cause);
+        response(ctx, null, HttpCode.SERVER_ERROR);
     }
 
     @Override

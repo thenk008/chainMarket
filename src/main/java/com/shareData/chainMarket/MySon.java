@@ -57,8 +57,8 @@ public abstract class MySon {
             }
         } catch (Exception e) {
             //抛错前返回500
-            web.response(ch, null, HttpCode.SERVER_ERROR);
             e.printStackTrace();
+            web.response(ch, null, HttpCode.SERVER_ERROR);
         }
         return isRight;
     }

@@ -5,8 +5,6 @@ import com.shareData.chainMarket.def.ResConfig;
 import com.shareData.chainMarket.def.UrmAndUrl;
 import com.shareData.chainMarket.i.RequestManager;
 import io.netty.channel.ChannelHandlerContext;
-
-import java.io.UnsupportedEncodingException;
 import java.util.Map;
 
 public class MyControl extends MySon {
@@ -30,6 +28,7 @@ public class MyControl extends MySon {
                 isRight = false;
             }
         } catch (Exception e) {
+            e.printStackTrace();
             isRight = false;
         }
         return isRight;

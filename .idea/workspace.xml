@@ -4,10 +4,10 @@
     <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyControl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MyData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/MySon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/constant/HttpsSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/constant/HttpsSetting.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mj" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -178,7 +178,13 @@
       <workItem from="1570698954488" duration="265000" />
       <workItem from="1570699363840" duration="116000" />
       <workItem from="1570764485529" duration="5732000" />
-      <workItem from="1570860299938" duration="7629000" />
+      <workItem from="1570860299938" duration="8722000" />
+      <workItem from="1570934078143" duration="534000" />
+      <workItem from="1571275572295" duration="119000" />
+      <workItem from="1572318747491" duration="655000" />
+      <workItem from="1572484642294" duration="878000" />
+      <workItem from="1572585360000" duration="1443000" />
+      <workItem from="1572659683095" duration="1230000" />
     </task>
     <task id="LOCAL-00001" summary="修改BUG">
       <created>1569294952721</created>
@@ -208,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570863655914</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加抛错500">
+      <created>1570868299850</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1570868299850</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +245,7 @@
     <MESSAGE value="增加FORM表单提交" />
     <MESSAGE value="增加WEBSOCKET 管理器" />
     <MESSAGE value="修改WEBSOCKET的BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改WEBSOCKET的BUG" />
+    <MESSAGE value="增加抛错500" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加抛错500" />
   </component>
 </project>
