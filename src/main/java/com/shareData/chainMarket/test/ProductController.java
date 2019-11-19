@@ -1,8 +1,9 @@
 package com.shareData.chainMarket.test;
 
+import com.shareData.chainMarket.FileAndName;
 import com.shareData.chainMarket.i.Central;
 
-import java.util.Map;
+import java.util.List;
 
 /**
  * @author tengyy
@@ -12,7 +13,7 @@ import java.util.Map;
 public class ProductController {
 
     @Central(url = "/list")
-    public String list(String message, Map<Object, Object> map){
+    public String list(List<FileAndName> forms) {
         return "a";
     }
 }
