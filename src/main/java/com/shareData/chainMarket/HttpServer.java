@@ -20,14 +20,13 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 import io.netty.handler.ssl.SslHandler;
 
 public class HttpServer {
-    public void start(int port, String rootUrl, String delimiter, int maxLength, String webSocektUrl,
+    public void start(int port, String rootUrl, int maxLength, String webSocektUrl,
                       WebSocketBack webSocketBack) {
-        if (rootUrl != null && delimiter != null && maxLength > 0 && webSocektUrl != null
-                && webSocketBack != null) {
+        if (rootUrl != null && maxLength > 0) {
             ScanControl scanControl = new ScanControl();
             try {
                 Config.setMessage_Max(maxLength);
-                Config.setPOINTER(delimiter);
+                //Config.setPOINTER(delimiter);
                 Config.setRootUrl(rootUrl);
                 Config.setWebSocketUrl(webSocektUrl);
                 scanControl.start(rootUrl);

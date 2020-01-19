@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_13_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_13_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/ProductTypeController.java" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,8 +34,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/apache-maven-3.6.1" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+        <option name="mavenHome" value="$USER_HOME$/apache-maven-3.6.0" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -37,14 +44,20 @@
     </option>
   </component>
   <component name="ProjectId" id="1OfXwkOVwA5NUEunwgIl98iaBzq" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -65,18 +78,6 @@
       <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\distribution" />
       <recent name="E:\chainMarket\src\main\java\com\shareData\chainMarket\tools" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -125,6 +126,18 @@
         <item itemvalue="Application.TestTwo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -185,6 +198,10 @@
       <workItem from="1573197728853" duration="63000" />
       <workItem from="1573198742978" duration="330000" />
       <workItem from="1574126143848" duration="153000" />
+      <workItem from="1578403785184" duration="651000" />
+      <workItem from="1578404523467" duration="143000" />
+      <workItem from="1579246465848" duration="214000" />
+      <workItem from="1579396458750" duration="6590000" />
     </task>
     <task id="LOCAL-00001" summary="修改BUG">
       <created>1569294952721</created>
@@ -254,5 +271,43 @@
     <MESSAGE value="增加抛错500" />
     <MESSAGE value="修改BUG" />
     <option name="LAST_COMMIT_MESSAGE" value="修改BUG" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#Project_Structure" timestamp="1578404382309">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1578404382309" />
+    <state x="331" y="47" key="CommitChangelistDialog2" timestamp="1579403556331">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="331" y="47" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579403556331" />
+    <state width="1398" height="161" key="GridCell.Tab.0.bottom" timestamp="1579401123568">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="161" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1579401123568" />
+    <state width="1398" height="161" key="GridCell.Tab.0.center" timestamp="1579401123567">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="161" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1579401123567" />
+    <state width="1398" height="161" key="GridCell.Tab.0.left" timestamp="1579401123566">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="161" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1579401123566" />
+    <state width="1398" height="161" key="GridCell.Tab.0.right" timestamp="1579401123567">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1398" height="161" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1579401123567" />
+    <state x="229" y="89" key="SettingsEditor" timestamp="1579397034908">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579397034908" />
+    <state x="413" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1578404523342">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="413" y="282" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1578404523342" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1579399469788">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1579399469788" />
   </component>
 </project>

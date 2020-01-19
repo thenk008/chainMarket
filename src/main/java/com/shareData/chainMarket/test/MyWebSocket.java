@@ -1,6 +1,7 @@
 package com.shareData.chainMarket.test;
 
 import com.shareData.chainMarket.WebSocketBack;
+import com.shareData.chainMarket.session.WebSocketManager;
 import io.netty.channel.ChannelHandlerContext;
 
 public class MyWebSocket extends WebSocketBack {
@@ -11,6 +12,8 @@ public class MyWebSocket extends WebSocketBack {
 
     @Override
     public String getText(String message, ChannelHandlerContext ctx) {
+        WebSocketManager.register(1,ctx);
+        WebSocketManager.putMessage(1,"发送信息");
         return "ok";
     }
 }

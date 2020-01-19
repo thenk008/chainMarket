@@ -44,7 +44,6 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
 
     @Override
     protected void channelRead0(ChannelHandlerContext arg0, Object msg) throws Exception {
-        System.out.println();
         if (msg instanceof HttpRequest) {
             request = (HttpRequest) msg;
             uri = request.uri();
@@ -89,7 +88,7 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
 
     private List<FileAndName> writeChunk(ChannelHandlerContext ctx) throws IOException {
         List<InterfaceHttpData> postList = httpDecoder.getBodyHttpDatas();
-        List<FileAndName> fileAndNames = new ArrayList<>();
+        List<FileAndName> fileAndNames = new ArrayList<FileAndName>();
         for (int i = 0; i < postList.size(); i++) {
             InterfaceHttpData data = postList.get(i);
             if (data != null) {
