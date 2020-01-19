@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60ab8200-7f6e-4ee6-9859-c9c65a328f84" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_13_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_13_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/Http.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/HttpServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/MyWebSocket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/shareData/chainMarket/test/ProductTypeController.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +192,7 @@
       <workItem from="1578403785184" duration="651000" />
       <workItem from="1578404523467" duration="143000" />
       <workItem from="1579246465848" duration="214000" />
-      <workItem from="1579396458750" duration="6590000" />
+      <workItem from="1579396458750" duration="6787000" />
     </task>
     <task id="LOCAL-00001" summary="修改BUG">
       <created>1569294952721</created>
@@ -245,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572661487237</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="更新API文档">
+      <created>1579403592356</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579403592357</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,17 +268,18 @@
     <MESSAGE value="修改WEBSOCKET的BUG" />
     <MESSAGE value="增加抛错500" />
     <MESSAGE value="修改BUG" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改BUG" />
+    <MESSAGE value="更新API文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新API文档" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="115" key="#Project_Structure" timestamp="1578404382309">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="115" key="#Project_Structure/0.0.1440.900@0.0.1440.900" timestamp="1578404382309" />
-    <state x="331" y="47" key="CommitChangelistDialog2" timestamp="1579403556331">
+    <state x="331" y="47" key="CommitChangelistDialog2" timestamp="1579403592014">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="331" y="47" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579403556331" />
+    <state x="331" y="47" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1579403592014" />
     <state width="1398" height="161" key="GridCell.Tab.0.bottom" timestamp="1579401123568">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -301,6 +300,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1579397034908" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1579403601948">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1579403601948" />
     <state x="413" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1578404523342">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
