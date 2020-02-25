@@ -148,7 +148,9 @@ public class Http extends SimpleChannelInboundHandler<Object> implements Request
                 handshaker.handshake(arg0.channel(), msg);
             }
         }
-        webSocketBack.active(arg0);
+        if (webSocketBack != null) {
+            webSocketBack.active(arg0);
+        }
     }
 
     @Override
